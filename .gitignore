@@ -1,4 +1,8 @@
 # Git ignore
 
+# Virtual enviroment of python
 venv/
 
+# deprecated
+
+high_order_functions_(deprecated).py
