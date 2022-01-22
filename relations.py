@@ -1,10 +1,35 @@
+from pprint import pprint
+
+
 def simetricP(setR):
     for tuple in setR:
-        print(tuple)
+        a,b= tuple
+        if ((a,a) not in setR) or ((b,b) not in setR):
+            return False
+    return True
+
+
+def reflexive(setR):
+    for tuple in setR:
+        a,b= tuple
+        if (b,a) not in setR:
+            return False
+    return True
+
 
 def main():
     setR = read_file('./relations/r1.txt')
-    simetricP(setR)
+    if simetricP(setR):
+        print('Es simétrica')
+    else:
+        print('No es simétrica')
+    
+    if reflexive(setR):
+        print('Es reflexiva')
+    else:
+        print('No es reflexiva')
+
+    
 
 def read_file(file_name):
     try:
@@ -14,7 +39,8 @@ def read_file(file_name):
             for line in f:
                 # setR.append(tuple(line.strip(')(\n')))
                 # Nested tuples: adding tuples inside tuple 'setb'
-                setb= setb + ( tuple(map( int ,  line.strip(')(\n').split(','))  ) ,)
+                #getting out '()\n'; spliting it; turn them into intergers; 
+                setb= setb + ( tuple( map( int,  line.strip(')(\n').split(',')) ) ,)
             return setb
     except:
         print('There was an exception')
