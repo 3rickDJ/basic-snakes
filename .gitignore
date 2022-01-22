@@ -6,3 +6,10 @@ venv/
 # deprecated
 
 high_order_functions_(deprecated).py
+#======
+# ignore from start
+__pycache__/
+.vscode
+lists.py
+break_continue.py
+
