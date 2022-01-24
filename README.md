@@ -1,7 +1,7 @@
 # Basic snakes
 
 
-## Own personal repository
+## Picato Mostaza!!
 Language --> Python
 
 Objective --> Record my progress in python programming
