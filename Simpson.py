@@ -16,15 +16,17 @@ def simpson(intervals,suplim, inflim):
 
 
 def main():
-    input('Holas')
-    stopValue='23.596'
+    stopValue=input('Digit the stop value: ')
+    sup=float(input('Set the limit superior: '))
+    inf=float(input('Set the limit inferior: '))
+    # stopValue='23.596'
     decimalResult=''
-    n=0
+    intervals=0
     while decimalResult!=stopValue:
-        n+=1
-        decimalResult=simpson(n,5,0)[:6]
-        print(n,"   ", decimalResult)
-    print("Final")
+        intervals+=1
+        decimalResult=simpson(intervals,sup,inf)[:len(stopValue)]
+        print(intervals,"   ", decimalResult)
+    print("Requiered number of intervals is: n = ", intervals)
 
 
 if __name__=='__main__':
